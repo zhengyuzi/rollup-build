@@ -1,6 +1,6 @@
 # @zhengyuzi/rollup-build
 
-A ES module bundler based on Rollup.
+An ES module bundler based on Rollup.
 
 ## Install
 
@@ -60,8 +60,9 @@ View [rollup-plugin-node-externals](https://github.com/Septh/rollup-plugin-node-
 
 ### plugins
 
-Rollup plugin.
+Add rollup plugin.
 
 ## Reference
 
+- [rollup](https://github.com/rollup/rollup)
 - [unbuild](https://github.com/unjs/unbuild)
