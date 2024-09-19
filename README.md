@@ -62,6 +62,32 @@ View [rollup-plugin-node-externals](https://github.com/Septh/rollup-plugin-node-
 
 Add rollup plugin.
 
+## Command
+
+### dir
+
+The directory to build/stub.
+
+```json
+{
+  "scripts": {
+    "build": "robuild output"
+  }
+}
+```
+
+### stub
+
+Stub dist link your project during the development.
+
+```json
+{
+  "scripts": {
+    "build": "robuild --stub"
+  }
+}
+```
+
 ## Reference
 
 - [rollup](https://github.com/rollup/rollup)
