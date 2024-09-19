@@ -35,12 +35,12 @@ export function getRollupOptions(config: BuildDefaultConfig): RollupOptions {
     Externals(externals),
     Json(),
     Typescript(),
+    Commonjs(),
     NodeResolve({
       extensions: ['.ts', '.tsx', '.mts', '.cts', '.mjs', '.cjs', '.js', '.jsx', '.json'],
     }),
-    Commonjs(),
-    minify && terser(),
     ...(config.plugins || []),
+    minify && terser(),
   ].filter(Boolean)
 
   return {
