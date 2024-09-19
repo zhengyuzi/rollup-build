@@ -42,10 +42,6 @@ export interface BuildDefineConfig {
   source: BuildConfig[]
 }
 
-export interface BuildCliConfig {
-  minify?: boolean
-}
-
 export function defineConfig(
   config: BuildConfig | BuildConfig[],
 ): BuildDefineConfig {
