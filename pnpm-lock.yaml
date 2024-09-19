@@ -35,9 +35,15 @@ importers:
       filesize:
         specifier: ^10.1.6
         version: 10.1.6
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
       gzip-size:
         specifier: ^7.0.0
         version: 7.0.0
+      mlly:
+        specifier: ^1.7.1
+        version: 1.7.1
       rollup:
         specifier: ^4.21.2
         version: 4.21.3
@@ -47,13 +53,13 @@ importers:
       rollup-plugin-node-externals:
         specifier: ^7.1.3
         version: 7.1.3(rollup@4.21.3)
-      stubb:
-        specifier: ^1.3.0
-        version: 1.3.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.5.0
         version: 3.6.0(@typescript-eslint/utils@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.5)(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
       '@types/node':
         specifier: ^22.5.4
         version: 22.5.5
@@ -565,6 +571,12 @@ packages:
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  '@types/fs-extra@11.0.4':
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+
+  '@types/jsonfile@6.1.4':
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -2012,10 +2024,6 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  stubb@1.3.0:
-    resolution: {integrity: sha512-Jb7V/CKGdVTvCU80HycGxqKzHEGsNjJZN2jMOW02Lni7aQs8X6XgGfJ6X+gpx8EskEld4FbCAVg9UVyqNpf3IA==}
-    hasBin: true
-
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
     engines: {node: '>=4'}
@@ -2595,6 +2603,15 @@ snapshots:
       '@types/ms': 0.7.34
 
   '@types/estree@1.0.5': {}
+
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 22.5.5
+
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 22.5.5
 
   '@types/mdast@4.0.4':
     dependencies:
@@ -4293,12 +4310,6 @@ snapshots:
       min-indent: 1.0.1
 
   strip-json-comments@3.1.1: {}
-
-  stubb@1.3.0:
-    dependencies:
-      fast-glob: 3.3.2
-      fs-extra: 11.2.0
-      mlly: 1.7.1
 
   supports-color@5.5.0:
     dependencies:

@@ -32,7 +32,9 @@
     "dist"
   ],
   "scripts": {
+    "stub": "esno src/cli.ts --stub",
     "build": "esno src/cli.ts",
+    "dev": "esno dist/a.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "simple-git-hooks"
@@ -47,14 +49,16 @@
     "citty": "^0.1.6",
     "consola": "^3.2.3",
     "filesize": "^10.1.6",
+    "fs-extra": "^11.2.0",
     "gzip-size": "^7.0.0",
+    "mlly": "^1.7.1",
     "rollup": "^4.21.2",
     "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-node-externals": "^7.1.3",
-    "stubb": "^1.3.0"
+    "rollup-plugin-node-externals": "^7.1.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.5.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.5.4",
     "eslint": "^9.10.0",
     "esno": "^4.7.0",
